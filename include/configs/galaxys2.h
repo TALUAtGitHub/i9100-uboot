@@ -230,9 +230,6 @@ int sgs2_kp_getc(void);
 			"sec_debug.enable_user=0 sec_log=0x100000@0x4d900000 " \
 			"s3cfb.bootloaderfb=0x5ec00000 ld9040.get_lcdtype=0x2 " \
 			"consoleblank=0 lpj=3981312 vmalloc=144m ;" \
-		"if test $sgs2_bootmode_val -eq 1; then "\
-			"setenv android_cmd ${android_cmd} bootmode=2; " \
-		"fi ;" \
 		"mmc dev 0; " \
 		"mmc read ${loadaddr} 0x16000 0x4000; " \
 		"setenv bootargs ${android_cmd}; "\
